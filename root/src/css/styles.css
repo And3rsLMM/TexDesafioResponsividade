@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "ROBOTO", sans-serif;
+    background: rgb(255,215,58);
+    background: linear-gradient(90deg, rgba(255,215,58,1) 0%, rgba(224,143,23,1) 100%);
+  }
+  
+  .nav,
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    padding: 0 2em;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    position: relative;
+    text-align: center;
+    padding: 0 2em;
+  }
+  
+  .nav h1,
+  .content h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 5vw;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.5rem;
+    color: #f2f8f7;
+    transition: all 0.3s ease;/*deixar a transição de tela e demais animações mais suaves*/
+    z-index: 3;
+  }
+  h1:hover {
+    transform: translate3d(0, -10px, 22px);
+    color: #0f0107;
+  }
+  
+  .content h2 {
+    font-size: 2vw;
+    letter-spacing: 0.3rem;
+    font-family: "ROBOTO", sans-serif;
+    font-weight: 300;
+    color: #e9e4dd;
+    z-index: 4;
+  }
+
+  .footer h2 {
+    font-size: 2vw;
+    letter-spacing: 0.3rem;
+    font-family: "ROBOTO", sans-serif;
+    font-weight: 300;
+    color: #0c0701;
+    z-index: 4;
+  }
+
+  
+  h3.span {
+    font-size: 2vw;
+    letter-spacing: 0.7em;
+    font-family: "ROBOTO", sans-serif;
+    font-weight: 300;
+    color: #faebd7;
+    z-index: 4;
+  }
+  span:hover {
+    color: #080004; /*verificar porque nao esta mantendo a cor especificado ao dar o hover*/
+    font-weight: 500;
+    font-size: 2.2vw;
+  }
+  
+  a{
+    text-decoration: none;/*remove os sublinhados dos links e firulagens dos textos*/
+  }
+  
+  .footer a {
+    font-size: 1vw;
+    font-family: "ROBOTO", sans-serif;
+    font-weight: 600;
+    color: #eeebe8;
+    z-index: 4;
+  }
+
+  .footer a:hover {
+    transform: translate3d(0, -10px, 22px);
+    color: #0f0107;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 75px;
+    box-shadow: 20px 0px 50px rgba(0, 0, 0, 0.5);/*verificar*/
+    z-index: auto;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  }
+  
+  .nav-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #0e0101;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 2vw;
+  }
+  
+  .nav-tab:hover {
+    color: #ebecf1;
+    background: #000000;
+    transition: all 0.5s ease;
+  }
+
+  @media (min-width: 800px) {/*ponto de quebra 1 da resolução...testar com outras resuluções depois*/
+    .nav h1,
+    .content h1 {
+      font-size: 5vw;
+    }
+  
+    .nav h2,
+    .content h2 {
+      font-size: 3vw;
+    }
+  
+    .nav-tab {
+      font-size: 3vw;
+    }
+  }
+  
+  @media screen and (min-width: 360px) {
+    .nav h1,
+    .content h1 {
+      font-size: 8vw;
+    }
+  
+    .nav h2,
+    .content h2 {
+      font-size: 2vw;
+      letter-spacing: 0.2vw;
+    }
+  
+    .nav-tab {
+      font-size: 1.5vw;
+    }
+  }
+
+  .background {/*testar oque deu errado com o BG*/
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .loader span {
+    color:transparent;
+    text-shadow: 0 0 0 #f0eeeb;
+    -webkit-animation: loading 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes loading {
+    to {
+      text-shadow: 20px 0 70px #0c0105;
+      color: #070003;
+    }
+  }
+  .loader span:nth-child(2) {/*tempo da animação do subtitulo...melhorar*/
+    -webkit-animation-delay: 0.1s;
+  }
+  .loader span:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+  }
+  .loader span:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+  }
+  .loader span:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+  }
+  .loader span:nth-child(6) {
+    -webkit-animation-delay: 0.5s;
+  }
+  .loader span:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+  }
+  .loader span:nth-child(8) {
+    -webkit-animation-delay: 0.7s;
+  }
+  .loader span:nth-child(9) {
+    -webkit-animation-delay: 0.8s;
+  }  
+  .loader span:nth-child(10) {
+    -webkit-animation-delay: 0.9s;
+  }
+  .loader span:nth-child(11) {
+    -webkit-animation-delay: 1.0s;
+  }
+  .loader span:nth-child(12) {
+    -webkit-animation-delay: 1.1s;
+  }
+  .loader span:nth-child(13) {
+    -webkit-animation-delay: 1.2s;
+  }
